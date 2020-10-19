@@ -50,7 +50,7 @@ console.log(returnArray(1,2,3))
 // Problem 4
 function splitArray (thisArray) {
   // access individual elements of an array with array[0], array[1], etc.
-  return thisArray[0] + ' ' + thisArray[1] + ' was a ' + thisArray[2] + ', a damn ' + thisArray[2] + '.';
+  return thisArray[0] + ' ' + thisArray[1] + ' was a ' + thisArray[2] + '.';
 }
 console.log(splitArray(['Cheryl', 'Lee', 'clown']))
 
@@ -86,10 +86,10 @@ function typeTester (unknown) {
     return unknown + ' yay!'
   } 
   else if (typeof unknown === 'number'){
-    return unknown**2
+    return unknown*unknown
   }
   else if (typeof unknown === 'undefined'){
-    return "sorry, I can't do anything with an undefined value."
+    return 'Sorry, I can\'t do anything with an undefined value.'
   }
   else {
     return "I don't know how to use that kind of variable."
