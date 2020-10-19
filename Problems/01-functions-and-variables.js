@@ -24,116 +24,83 @@
 // the special comment blocks above each function should help VSCode correct your mistakes. 
 
 // Problem 1
-// write a function "hello" that always returns the string "Hello!"
-
-/**
- * greet the user!
- * @returns {string} should be exactly "Hello!"
- */
-function hello () {
-  // if you want you can declare a string variable first
-  // or in this case you can just return the string directly
-  // with something like "return 'Hello!'"
+function hello() {
+  return 'Hello!';
 }
+console.log(hello());
+
 
 // Problem 2
-// Improve your initial function by accepting a parameter
-// "name" and returning a string "Hello, [insert name]!"
-
-/**
- * create a string "Hello, NAME!",where NAME is the  parameter value
- * @param {string} name
- * @returns {string} a sentence that uses NAME i nits construction.
- */
 function greeting(name) {
-  // use the '+' operator to combine
-  // strings.  So for instance, if I wanted to
-  // say goodbye, I might write
-  // let parting = "Goodbye, " + name + "!";
-  // (but of course, I actually want to say hello.)
+  let greeting = 'Hello, ' + name + '!'
+  return greeting;
 }
+console.log(greeting('Matthew'))
+
 
 // Problem 3
-// write a function that takes three parameters and returns an array
-// consisting of the three parameters together
-/**
- * creat an array from three inputs FIRST, SECOND, and THIRD
- * @param {} first
- * @param {} second
- * @param {} third
- * @returns {array} 
- */
 function returnArray (first, second, third) {
   // you can define the array using "new Array ()" or just "[ , , ]"
-  // don't forget to return it
+  let coolArray = [first, second, third];
+  return coolArray
 }
+console.log(returnArray(1,2,3))
 
 
 // Problem 4
-// write a function that, when passed a single argument (an array of 3 or more elements)
-// returns a sentence of the form "first second was a third", so, e.g.,
-// splitArray(["Italo", "Calvino", "novelist"])
-// should return
-// "Italo Calvino was a novelist."
-
-
-/**
- * split THISARRAY and use its elements to compose a sentence
- * @param {} thisArray of minimum length 3
- * @returns {string} a sentence  composed from the first 3 elements of the array
- */
 function splitArray (thisArray) {
-  // remember you can access individual elements of an array with
-  // array[0]
-  // array[1]
-  // etc.
-
+  // access individual elements of an array with array[0], array[1], etc.
+  return thisArray[0] + ' ' + thisArray[1] + ' was a ' + thisArray[2] + ', a damn ' + thisArray[2] + '.';
 }
+console.log(splitArray(['Cheryl', 'Lee', 'clown']))
+
 
 // Problem 5
-// A. Write a simple function that takes two arguments.  Subtact the second number from the first.
-// Return the result
-/**
- * subtract NUMBER2 from NUMBER1
- * @param {number} number1
- * @param {number} number2
- * @returns {number} the difference of the two parameters
- */
+//A.
 function subtract(number1, number2) {
-  // subtract number2 from number1, and return the result.
+  let difference = number1 - number2;
+  return difference
 }
-
+console.log(subtract(80,3))
 
 //B. Write a slightly more complex number that only performs the subtraction after testing to be
 // sure that both parameters are numbers. If so, return the result. If not, return the string
 // "I can only subtract numbers."
 
 function carefulSubtract (first, second) {
-  // test to be sure that both first and second are numbers.
-  // if so, return the result. Otherwise, return the string
-  // "I can only subtract numbers."
-
+  if (typeof first === 'number' && typeof second === 'number'){
+    let difference = first - second;
+    return difference
+  }
+  else {
+    return 'I can only subtract numbers.'
+  }
 }
-
+console.log(carefulSubtract(65,24))
+console.log(carefulSubtract('aaaa',24))
 
 
 // Problem 6
-// Write a simple function that does the following:
-// if the parameter is a string, return the string followed by the additional text " yay!"
-// if the parameter is a number, return the *square* of the number
-// if the parameter is undefined, return the string "sorry, I can't do anything with an undefined value."
-// for any other type, return "I don't know how to use that kind of variable."
-/**
- * identify the type of UNKNOWN
- * @param {} unknown
- * @returns {} a meessage about unknown, or the square of unknown if it is a number
- */
 function typeTester (unknown) {
-  // use an if/else construction, a switch/case , or any other branching logic. Remember to
-  // return a value. 
+  if (typeof unknown === 'string'){
+    return unknown + ' yay!'
+  } 
+  else if (typeof unknown === 'number'){
+    return unknown**2
+  }
+  else if (typeof unknown === 'undefined'){
+    return "sorry, I can't do anything with an undefined value."
+  }
+  else {
+    return "I don't know how to use that kind of variable."
+  }
 }
 
-
+let unVariable
+console.log(typeTester("Cats,"))
+console.log(typeTester(4))
+console.log(typeTester(unVariable))
+console.log(typeTester(true))
 
 // DO NOT MODIFY -- FOR AUTOMATED TESTING ONLY
 // MODIFYING THIS CODE WILL ALMOST CERTAINLY CAUSE YOUR TESTS TO BREAK
