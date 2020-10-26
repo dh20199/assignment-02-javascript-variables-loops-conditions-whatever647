@@ -67,9 +67,10 @@ function objectToSentence (obj) {
   // obj.propertyname
   // note the quotes in the first options
   // also note: you need to change this next line!!
-  return 'RETURNVALUE';
+  let sentence = obj.firstName + ' ' + obj.lastName + ' was a ' + obj.profession + '.'
+  return sentence
 }
-
+console.log(objectToSentence({firstName : 'Italo', lastName : 'Calvino', profession : 'novelist'}))
 
 // Problem 3
 // Write a function that takes an object as a parameter. If the object
@@ -98,12 +99,16 @@ function objectToSentence (obj) {
  * @returns {string} a sentence constructed from the object parameters
  */
 function wasWriter (obj) {
-  // in an if/else statement
-  // it is acceptable to put the
-  // "return" statement inside the conditional braces
-  // so you can, e.g.,
-  // if (...) {return A} else {return B}
+  if (obj.profession === 'novelist'){
+    let sentence1 = obj.firstName + ' ' + obj.lastName + ' was a writer.'
+    return sentence1
+  }
+  else {
+    let sentence2 = obj.firstName + ' ' + obj.lastName + ' was not a writer.'
+    return sentence2
+  }
 }
+console.log(wasWriter({ firstName:"Italo", lastName: "Calvino", profession: "nkjkjhst"}))
 
 
 // Problem 4
@@ -123,21 +128,17 @@ function wasWriter (obj) {
 function stringIterator (aString, aNumber) {
   // remember a basic "for" loop has this structure:
   // for (var i = 0; i< SOMETHING; i++) {...statements...  };
+let sentence = '';
+  for ( var i = 0; i < aNumber ; i++) {
+    sentence = sentence + aString;
+  }
+return sentence
 }
-
+console.log(stringIterator('Oh Canada!', 5))
 
 // Problem 5
 // Improve upon the above function by adding the iteration number in
 // parentheses after the strng, and adding a line break between iterations.
-
-// so, if passed as parameters ("Reconciliation before Celebration", 150)
-// it should return
-// Reconciliation before Celebration(1)
-// Reconciliation before Celebration(2)
-// Reconciliation before Celebration(3)
-// ...
-// ...
-// Reconciliation before Celebration(150)
 
 /**
  * return ASTRING iterated ANUMBER times on separate lines, with each line ending in a number from 
@@ -147,9 +148,13 @@ function stringIterator (aString, aNumber) {
  * @returns   {string}
  */
 function prettyIterator (aString, aNumber) {
-  // be sure to check your results on this one; it has a trick. maybe 2. 
+let sentence = '';
+  for ( var i = 0; i < aNumber ; i++) {
+    sentence = sentence + aString + '(' + ( i + 1 ) + ')' + '\n';
+  }
+  return sentence
 }
-
+console.log(prettyIterator('Oh Canada!', 6))
 
 
 // Problem 6
@@ -190,21 +195,22 @@ function prettyIterator (aString, aNumber) {
  * @returns {string} 
  */
 function computeReign (pm) {
-  // declare a variable, setting it equal to the
-  // length of reign. Now declare another variable,
-  // and construct the desired sentence using the appropriate
-  // attributes and variables. remember that you may need to
-  // "escape" the ' with \'
-  // finally, makre sure you return the sentence as the value of the function
+  // remember that you may need to "escape" the ' with \'
+let reign = (pm.to - pm.from);
+let sentence = pm.fullName + '\'s reign was ' + reign + ' years long.';
+return sentence
 }
-
+console.log(computeReign({
+ fullName : "Wilfred Laurier",
+ party    : "Liberal",
+ from     : 1896,
+ to       : 1911
+ }))
 
 
 // Problem 7
 // Write a function that takes as a parameter an ARRAY OF OBJECTS
 // and returns a set of reign-computing sentences, one for each object.
-
-// so, if invoked as follows:
 
 // var ministers = [ {
 // fullName: "Wilfred Laurier",
@@ -249,7 +255,31 @@ function sentences(list) {
   // is to use the "for...of" loop syntax to loop through the array,
   // and the object[attribute] or object.attribute reference format to access
   // the internal components of the objects.
+let sentences = ''
+for ( var i = 0; i < list.length ; i++){
+  reign = list[i].to - list[i].from
+  sentences = sentences + list[i].fullName + '\'s reign was ' + reign + ' years long. \n'
 }
+return sentences
+}
+
+console.log(sentences(ministers = 
+  [ {fullName: "Wilfred Laurier",
+  party: "Liberal",
+  from: "1896",
+  to: "1911"
+  }, {
+  fullName: "Robert L. Borden",
+  party: "Conservative/Unionist",
+  from: "1911",
+  to: "1920"
+  }, {
+  fullName: "Arthur Meighen",
+  party: "Conservative",
+  from: "1920",
+  to: "1921"
+  }]))
+
 
 // DO NOT MODIFY -- FOR AUTOMATED TESTING ONLY
 if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
