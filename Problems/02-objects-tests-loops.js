@@ -26,8 +26,13 @@ function returnObject (first, last, prof) {
   // o.firstName = first
   // etc.
   // don't forget to return the object
+  let o = {};
+  o.firstName = first
+  o.lastName = last
+  o.profession = prof
+  return o
 }
-
+console.log(returnObject("cheryl", "lee", "clown"))
 
 
 // Problem 2

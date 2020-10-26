@@ -29,6 +29,11 @@ function hello() {
 }
 console.log(hello());
 
+function hello2 () {
+  const output = "Hello!"
+  return output;
+}
+console.log(hello2())
 
 // Problem 2
 function greeting(name) {
