@@ -27,20 +27,20 @@
 function hello() {
   return 'Hello!';
 }
-console.log(hello());
+//console.log(hello());
 
 function hello2 () {
   const output = "Hello!"
   return output;
 }
-console.log(hello2())
+//console.log(hello2())
 
 // Problem 2
 function greeting(name) {
   let greeting = 'Hello, ' + name + '!'
   return greeting;
 }
-console.log(greeting('Matthew'))
+//console.log(greeting('Matthew'))
 
 
 // Problem 3
@@ -49,7 +49,7 @@ function returnArray (first, second, third) {
   let coolArray = [first, second, third];
   return coolArray
 }
-console.log(returnArray(1,2,3))
+//console.log(returnArray(1,2,3))
 
 
 // Problem 4
@@ -57,7 +57,7 @@ function splitArray (thisArray) {
   // access individual elements of an array with array[0], array[1], etc.
   return thisArray[0] + ' ' + thisArray[1] + ' was a ' + thisArray[2] + '.';
 }
-console.log(splitArray(['Cheryl', 'Lee', 'clown']))
+//console.log(splitArray(['Cheryl', 'Lee', 'clown']))
 
 
 // Problem 5
@@ -66,7 +66,7 @@ function subtract(number1, number2) {
   let difference = number1 - number2;
   return difference
 }
-console.log(subtract(80,3))
+//console.log(subtract(80,3))
 
 //B. Write a slightly more complex number that only performs the subtraction after testing to be
 // sure that both parameters are numbers. If so, return the result. If not, return the string
@@ -81,8 +81,8 @@ function carefulSubtract (first, second) {
     return 'I can only subtract numbers.'
   }
 }
-console.log(carefulSubtract(65,24))
-console.log(carefulSubtract('aaaa',24))
+//console.log(carefulSubtract(65,24))
+//console.log(carefulSubtract('aaaa',24))
 
 
 // Problem 6
@@ -100,12 +100,10 @@ function typeTester (unknown) {
     return "I don't know how to use that kind of variable."
   }
 }
-
-let unVariable
-console.log(typeTester("Cats,"))
-console.log(typeTester(4))
-console.log(typeTester(unVariable))
-console.log(typeTester(true))
+//console.log(typeTester("Cats,"))
+//console.log(typeTester(4))
+//console.log(typeTester(unVariable))
+//console.log(typeTester(true))
 
 // DO NOT MODIFY -- FOR AUTOMATED TESTING ONLY
 // MODIFYING THIS CODE WILL ALMOST CERTAINLY CAUSE YOUR TESTS TO BREAK

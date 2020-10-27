@@ -32,7 +32,7 @@ function returnObject (first, last, prof) {
   o.profession = prof
   return o
 }
-console.log(returnObject("cheryl", "lee", "clown"))
+//console.log(returnObject("cheryl", "lee", "clown"))
 
 
 // Problem 2
@@ -67,10 +67,10 @@ function objectToSentence (obj) {
   // obj.propertyname
   // note the quotes in the first options
   // also note: you need to change this next line!!
-  let sentence = obj.firstName + ' ' + obj.lastName + ' was a ' + obj.profession + '.'
+  let sentence = obj.firstName + ' ' + obj.lastName + ' was a ' + obj.profession + '.';
   return sentence
 }
-console.log(objectToSentence({firstName : 'Italo', lastName : 'Calvino', profession : 'novelist'}))
+//console.log(objectToSentence({firstName : 'Italo', lastName : 'Calvino', profession : 'novelist'}))
 
 // Problem 3
 // Write a function that takes an object as a parameter. If the object
@@ -108,7 +108,7 @@ function wasWriter (obj) {
     return sentence2
   }
 }
-console.log(wasWriter({ firstName:"Italo", lastName: "Calvino", profession: "nkjkjhst"}))
+//console.log(wasWriter({ firstName:"Italo", lastName: "Calvino", profession: "nkjkjhst"}))
 
 
 // Problem 4
@@ -134,7 +134,7 @@ let sentence = '';
   }
 return sentence
 }
-console.log(stringIterator('Oh Canada!', 5))
+//console.log(stringIterator('Oh Canada!', 5))
 
 // Problem 5
 // Improve upon the above function by adding the iteration number in
@@ -154,7 +154,7 @@ let sentence = '';
   }
   return sentence
 }
-console.log(prettyIterator('Oh Canada!', 6))
+//console.log(prettyIterator('Oh Canada!', 6))
 
 
 // Problem 6
@@ -200,12 +200,12 @@ let reign = (pm.to - pm.from);
 let sentence = pm.fullName + '\'s reign was ' + reign + ' years long.';
 return sentence
 }
-console.log(computeReign({
- fullName : "Wilfred Laurier",
- party    : "Liberal",
- from     : 1896,
- to       : 1911
- }))
+//console.log(computeReign({
+// fullName : "Wilfred Laurier",
+// party    : "Liberal",
+// from     : 1896,
+// to       : 1911
+// }))
 
 
 // Problem 7
